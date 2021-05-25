@@ -29,13 +29,21 @@
 .button {
   background-color: #064420;
   height: 50%;
-  width: 10em;
+  width: 12em;
   margin: 1em;
   margin-right: 4em;
   border-radius: 1em;
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .button:hover {
   cursor: pointer;
+  background-color: #09632f;
+}
+
+.cart{
+  font-size: 1.8em;
+  color: #faf1e6;
 }
