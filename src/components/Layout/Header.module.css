@@ -1,0 +1,41 @@
+.header{
+  width: 100vw;
+  background-color: #faf1e6;
+  height: 5em;
+  font-family: 'Odibee Sans', cursive;
+  display: flex;
+}
+
+.restaurant{
+  margin: 1em;
+  color: #064420;
+  font-size: 2.5em;
+  width: 50%;
+}
+
+.left{
+  width: 50vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.right{
+  width: 50vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.button {
+  background-color: #064420;
+  height: 50%;
+  width: 10em;
+  margin: 1em;
+  margin-right: 4em;
+  border-radius: 1em;
+  display: flex;
+}
+
+.button:hover {
+  cursor: pointer;
+}
