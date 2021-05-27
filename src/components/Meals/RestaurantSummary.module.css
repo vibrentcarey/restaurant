@@ -1,9 +1,9 @@
 .summary {
   width: 60vw;
-  background-color:#faf1e6 ;
+  background-color: #faf1e6;
   margin-top: 4em;
-  height: 45vh;
-  padding: .1em;
+  height: 60vh;
+  padding: 0.1em;
   border-radius: 1em;
   color: #064420;
   display: flex;
@@ -11,12 +11,11 @@
   align-items: center;
 }
 
-h1{
-
-font-size: 2.5em;
+h1 {
+  font-size: 2.5em;
 }
 
-h2{
+h2 {
   color: #0a7336;
   font-size: 1.8em;
 }

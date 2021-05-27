@@ -1,0 +1,16 @@
+.item {
+  width: 95%;
+  border: 0.1px solid #0a7336;
+  border-radius: 1em;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+h1 {
+  margin-bottom: 0.2em;
+}
+
+.details {
+  color: #0a7336;
+  margin: 0;
+}
