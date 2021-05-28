@@ -1,5 +1,9 @@
 import classes from './Menu.module.css'
 import MenuItem from './MenuItem'
+import salad from '../../assets/salad.jpg'
+import sushi from '../../assets/sushi.jpg'
+import burger from '../../assets/veganBurger.jpg'
+
 
 const MENUITEMS = [
   {
@@ -7,14 +11,21 @@ const MENUITEMS = [
     name: 'Salad',
     description: 'Healthy...and green...',
     price: 18.99,
-    img: 'salad'
+    img: salad
   },
   {
     id: 'm2',
     name: 'Sushi',
     description: 'Vegan Avocado Roll',
     price: 12.99,
-    img: 'sushi'
+    img: sushi
+  },
+  {
+    id: 'm3',
+    name: 'Burger',
+    description: 'Vegan Burger with  Fries',
+    price: 16.99,
+    img: burger
   }
 ]
 
