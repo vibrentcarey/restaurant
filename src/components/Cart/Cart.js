@@ -1,7 +1,7 @@
 import classes from './Cart.module.css'
 import Modal from './Modal'
 
-const Cart = () => {
+const Cart = ({ toggleCart }) => {
   return (
     <Modal>
       <div className={classes.cart}>
@@ -15,12 +15,12 @@ const Cart = () => {
         </div>
 
         <div className={classes.footer}>
-        <div className={classes.total}>
-          <h1>Total:</h1>
-        </div>
-        <div className={classes.buttons}>
-          <button id={classes.close} className={classes.button}>Close</button>
-          <button className={classes.button}>Order</button>
+          <div className={classes.total}>
+            <h1>Total:</h1>
+          </div>
+          <div className={classes.buttons}>
+            <button onClick={toggleCart} id={classes.close} className={classes.button}>Close</button>
+            <button className={classes.button}>Order</button>
           </div>
         </div>
 
