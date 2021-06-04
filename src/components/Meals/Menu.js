@@ -30,7 +30,7 @@ const MENUITEMS = [
 ]
 
 const menuItems = MENUITEMS.map(item => {
-  return <MenuItem img={item.img} name={item.name} description={item.description} price={item.price} />
+  return <MenuItem id={item.id} img={item.img} name={item.name} description={item.description} price={item.price} />
 })
 
 const Menu = () => {

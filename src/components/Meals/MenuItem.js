@@ -1,7 +1,20 @@
+import { useContext } from "react"
+import CartContext from "../../store/cart-context"
 import MenuForm from "./MenuForm"
 import classes from "./MenuItem.module.css"
 
-const MenuItem = ({ name, description, price, img }) => {
+const MenuItem = ({ id, name, description, price, img }) => {
+const cartContext = useContext(CartContext)
+
+//Call the add function from our context and pass the item object
+const addToCart = amount => {
+  cartContext.addItem({
+    id,
+    name,
+    amount,
+    price
+  })
+}
   return (
     <div className={classes.item}>
       <div className={classes.left}>
@@ -13,7 +26,7 @@ const MenuItem = ({ name, description, price, img }) => {
         </div>
       </div>
       <div className={classes.right}>
-        <MenuForm />
+        <MenuForm addToCart={addToCart}/>
       </div>
     </div>
   )
