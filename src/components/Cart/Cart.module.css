@@ -1,7 +1,7 @@
 .cart {
   background-color: #faf1e6;
   width: 60vw;
-  height: 40vh;
+  height: 60vh;
   border-radius: 1em;
   display: flex;
   flex-direction: column;
@@ -13,6 +13,7 @@
   width: 100%;
   height: 60%;
   background-color:#faf1e6;
+  overflow: scroll;
 }
 
 .footer {
@@ -49,4 +50,16 @@ color: #064420;
 }
 .total {
   margin: 1em;
+}
+.item {
+  display: flex;
+  margin: .5em;
+  border: 1px solid #064420;
+  border-radius: 1em;
+  padding: .1em;
+}
+
+hr {
+  border: 1px solid #064420;
+  width: 90%
 }
