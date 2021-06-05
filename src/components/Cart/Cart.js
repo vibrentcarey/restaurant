@@ -4,13 +4,22 @@ import classes from './Cart.module.css'
 import Modal from './Modal'
 
 const Cart = ({ toggleCart }) => {
-const cartContext = useContext(CartContext)
-//Extract the name from the items array
-const cartItems = cartContext.items.map(item => {
-  return <div className={classes.item}><h2>{item.name}</h2></div>
-})
+  const cartContext = useContext(CartContext)
+  //Extract the properties from the items array
+  const cartItems = cartContext.items.map(item => {
+    return <div className={classes.item}>
+    <div className={classes.cartInfo}>
+      <h2>{item.name} x{item.amount}</h2>
+      <h3>${item.price}</h3>
+      </div>
+      <div className={classes.itemForm}>
+      <button id={classes.remove} className={classes.cartButton}>-</button>
+        <button className={classes.cartButton}>+</button>
+      </div>
+    </div>
+  })
 
-const totalAmount = cartContext.total
+  const totalAmount = cartContext.total
 
   return (
     <Modal>
@@ -19,10 +28,10 @@ const totalAmount = cartContext.total
         <div className={classes.header}>
           <h1>Your Cart</h1>
         </div>
-        <hr/>
+        <hr />
 
         <div className={classes.body}>
-         {cartItems}
+          {cartItems}
         </div>
 
         <div className={classes.footer}>
