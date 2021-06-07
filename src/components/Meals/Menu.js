@@ -9,14 +9,14 @@ const MENUITEMS = [
   {
     id: 'm1',
     name: 'Salad',
-    description: 'Healthy...and green...',
+    description: 'Caesar Salad',
     price: 18.99,
     img: salad
   },
   {
     id: 'm2',
     name: 'Sushi',
-    description: 'Vegan Avocado Roll',
+    description: 'Avocado Roll',
     price: 12.99,
     img: sushi
   },

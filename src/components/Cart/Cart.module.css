@@ -109,3 +109,13 @@ hr {
   background-color: #c4dccb;
 }
 
+@media screen and (max-width: 450px) {
+  .cart {
+    width: 90vw;
+    height: 70vh;
+  }
+  
+  .cartHeading {
+    font-size: x-large;
+  }
+}

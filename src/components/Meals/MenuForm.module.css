@@ -31,3 +31,14 @@ justify-content: center;
   cursor: pointer;
   background-color: #0a7336;
 }
+
+@media screen and (max-width:450px) {
+  .submit{
+    width: 80%;
+  }
+
+  span {
+    font-size: x-large;
+  }
+  
+}

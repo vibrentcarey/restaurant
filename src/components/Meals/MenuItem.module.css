@@ -10,11 +10,11 @@
   background-color: #f6e9d8;
 }
 
-.left{
+.left {
   display: flex;
-  width: 60%
+  width: 60%;
 }
-.right{
+.right {
   width: 40%;
   display: flex;
   flex-direction: column;
@@ -29,14 +29,24 @@ img {
   height: 8em;
   width: 8em;
   border-radius: 1em;
-  margin: .5em
+  margin: 0.5em;
 }
 
-.info{
+.info {
   margin-left: 1em;
 }
 
 .details {
   color: #0a7336;
   margin: 0;
+}
+
+@media screen and (max-width: 450px) {
+  img {
+    display: none;
+  }
+
+  .details{
+    font-size: x-large;
+  }
 }

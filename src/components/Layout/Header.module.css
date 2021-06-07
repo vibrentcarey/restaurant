@@ -46,3 +46,10 @@
   font-size: 1.8em;
   color: #faf1e6;
 }
+
+@media screen and (max-width: 450px) {
+  
+  .restaurant{
+    font-size: x-large;
+  }
+}
