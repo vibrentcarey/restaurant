@@ -8,5 +8,5 @@
   align-items: center;
   color: #064420;
   border-radius: 1em;
-  overflow: scroll;
+  /* overflow: scroll; */
 }

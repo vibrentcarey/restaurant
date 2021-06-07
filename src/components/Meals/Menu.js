@@ -23,7 +23,7 @@ const MENUITEMS = [
   {
     id: 'm3',
     name: 'Burger',
-    description: 'Vegan Burger with  Fries',
+    description: 'Vegan Burger',
     price: 16.99,
     img: burger
   }
@@ -37,6 +37,7 @@ const Menu = () => {
   return (
     <div className={classes.menu}>
       <h1>Menu</h1>
+      <hr/>
       {menuItems}
     </div>
   )
