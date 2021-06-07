@@ -9,9 +9,11 @@ const defaultCartState = {
 
 //Reducer function which receives state and action and returns new state
 const cartReducer = (state, action) => {
+  let updatedTotalAmount;
+  let updatedItems;
   if (action.type === 'ADD') {
     //Update the total amount by adding the item price
-    const updatedTotalAmount = state.totalAmount + action.item.amount * action.item.price
+     updatedTotalAmount = state.totalAmount + action.item.amount * action.item.price
 
     //Grab the index of the item in the cart
     const cartItemIndex = state.items.findIndex(item => {
@@ -21,9 +23,7 @@ const cartReducer = (state, action) => {
     //Use index to find item in cart
     const cartItem = state.items[cartItemIndex]
 
-    let updatedItems
-
-    if(cartItem) {
+    if (cartItem) {
       //Update the amount property of the existing item 
       const updatedItem = {
         ...cartItem,
@@ -35,8 +35,31 @@ const cartReducer = (state, action) => {
     } else {
       updatedItems = state.items.concat(action.item)
     }
+  }
 
-    
+    if (action.type === 'REMOVE') {
+      //Grab the index of the item in the cart
+      const cartItemIndex = state.items.findIndex(item => {
+        return item.id === action.id
+      })
+
+      //Use index to find item in cart
+      const cartItem = state.items[cartItemIndex]
+       updatedTotalAmount = state.totalAmount - cartItem.price
+
+      if (cartItem.amount === 1) {
+        updatedItems = state.items.filter(item => {
+          return item.id !== action.id
+        })
+      } else {
+        let updatedItem = {
+          ...cartItem,
+          amount: cartItem.amount - 1
+        }
+        updatedItems = [...state.items]
+        updatedItems[cartItemIndex] = updatedItem
+      }
+    }
 
     //Return a new state object with the updated items
     return {
@@ -44,9 +67,6 @@ const cartReducer = (state, action) => {
       totalAmount: updatedTotalAmount
     }
   }
-
-  return defaultCartState
-}
 
 const CartProvider = (props) => {
   /*useReducer takes the reducer function and default state and gives us

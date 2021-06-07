@@ -8,7 +8,11 @@ const Cart = ({ toggleCart }) => {
   const cartContext = useContext(CartContext)
 
   const addItem = (item) => {
-    cartContext.addItem({...item, amount:1})
+    cartContext.addItem({ ...item, amount: 1 })
+  }
+
+  const removeItem = (id) => {
+    cartContext.removeItem(id)
   }
 
   //Extract the properties from the items array
@@ -19,7 +23,7 @@ const Cart = ({ toggleCart }) => {
         <h2 className={classes.cartHeading}>${item.price}</h2>
       </div>
       <div className={classes.itemForm}>
-        <button id={classes.remove} className={classes.cartButton}>-</button>
+        <button onClick={() => removeItem(item.id)} id={classes.remove} className={classes.cartButton}>-</button>
         <button onClick={() => addItem(item)} className={classes.cartButton}>+</button>
       </div>
     </div>
