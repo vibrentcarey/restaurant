@@ -14,9 +14,10 @@
   height: 60%;
   background-color: #faf1e6;
   overflow: scroll;
-display: flex;
-justify-content: center;
-align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center
 }
 
 .footer {
@@ -98,7 +99,7 @@ hr {
   margin-left: 1em;
 }
 
-#remove{
+#remove {
   background-color: #e4efe7;
   color: #064420;
   border: 1px solid #064420;
@@ -107,3 +108,4 @@ hr {
 #remove:hover {
   background-color: #c4dccb;
 }
+
