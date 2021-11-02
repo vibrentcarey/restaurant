@@ -1,29 +1,29 @@
 input {
   width: 20%;
-  margin: .2em;
+  margin: 0.2em;
 }
 span {
   font-size: 2em;
 }
 form {
   display: flex;
-justify-content: center;
+  justify-content: center;
 }
-.form{
+.form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .submit {
-  background-color: #F6416C;
+  background-color: #f6416c;
   width: 50%;
   height: 2em;
   border-radius: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
-  color:#FFDE7D;
+  color: #ffde7d;
   font-size: large;
 }
 
@@ -32,13 +32,19 @@ justify-content: center;
   background-color: #e80b40;
 }
 
-@media screen and (max-width:450px) {
-  .submit{
-    width: 80%;
+@media screen and (max-width: 750px) {
+  .submit {
+    width: 60%;
+    font-size: small;
   }
 
   span {
-    font-size: x-large;
+    font-size: medium;
   }
-  
+}
+
+@media screen and (max-width: 450px) {
+  .submit {
+    width: 80%;
+  }
 }

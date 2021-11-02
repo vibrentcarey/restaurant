@@ -1,5 +1,5 @@
 .menu {
-  width: 80vw;
+  width: 80%;
   background-color: #00B8A9;
   margin: 4em;
   display: flex;
@@ -8,9 +8,17 @@
   color: #F6416C;
   border-radius: 1em;
   padding: 0.6rem;
+  max-width: 1000px;
 }
 
 hr {
   border: 1px solid #F6416C;
   margin-bottom: 2rem;
+}
+
+@media screen  and (max-width: 500px){
+  .menu{
+    width: 90%;
+  }
+  
 }

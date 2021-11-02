@@ -1,7 +1,7 @@
 .header{
-  width: 100vw;
+  width: 100%;
   background-color: #00B8A9;
-  height: 5em;
+  height: 8rem;
   display: flex;
 }
 
@@ -13,13 +13,13 @@
 }
 
 .left{
-  width: 50vw;
+  width: 50%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 .right{
-  width: 50vw;
+  width: 50%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -48,7 +48,14 @@
 }
 
 @media screen and (max-width: 450px) {
+  .right{
+    width: 70%;
+  }
   
+  .button{
+    width: 100%;;
+  }
+
   .restaurant{
     font-size: x-large;
   }

@@ -18,8 +18,8 @@ const MenuForm = ({addToCart}) => {
   return (
     <div className={classes.form}>
       <form>
-      TODO: ADD FORM VALIDATION
-        <span>Amount </span>
+      {/* TODO: ADD FORM VALIDATION */}
+        <span>Amount:</span>
         <input type='number' min='0' max='10' placeholder={0} ref={amountInputRef}/>
       </form>
       <br/>

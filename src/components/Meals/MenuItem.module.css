@@ -10,6 +10,7 @@
 
 .left {
   display: flex;
+  align-items: center;
   width: 60%;
 }
 .right {
@@ -39,12 +40,17 @@ img {
   margin: 0;
 }
 
-@media screen and (max-width: 450px) {
-  img {
-    display: none;
+@media screen and (max-width: 750px) {
+img{
+  height: 60px;
+  width: 20%;
+}
+  .details{
+    font-size: small;
   }
 
-  .details{
-    font-size: x-large;
+  .menu__item__header{
+    font-size: larger;
   }
+
 }
