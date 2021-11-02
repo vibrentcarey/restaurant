@@ -21,6 +21,7 @@ const addToCart = amount => {
         <img src={img} alt={name} className={classes.image} />
         <div className={classes.info}>
           <h1>{name}</h1>
+          TODO: ADD INGREDIENTS AND CHANGE PRICE COLOUR
           <h2 className={classes.details}>{description}</h2>
           <h2 className={classes.details}>${price}</h2>
         </div>

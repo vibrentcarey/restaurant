@@ -23,6 +23,7 @@ const Cart = ({ toggleCart }) => {
         <h2 className={classes.cartHeading}>${item.price}</h2>
       </div>
       <div className={classes.itemForm}>
+      TODO: NO NEGATIVE VALUES HERE AND LIMIT MAX
         <button onClick={() => removeItem(item.id)} id={classes.remove} className={classes.cartButton}>-</button>
         <button onClick={() => addItem(item)} className={classes.cartButton}>+</button>
       </div>
@@ -50,6 +51,7 @@ const Cart = ({ toggleCart }) => {
           </div>
           <div className={classes.buttons}>
             <button onClick={toggleCart} id={classes.close} className={classes.button}>Close</button>
+            TODO: ADD FEEDBACK AND CLOSE FORM AFTER ORDER
             <button className={classes.button}>Order</button>
           </div>
         </div>
