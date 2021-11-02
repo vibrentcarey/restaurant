@@ -36,9 +36,10 @@ const menuItems = MENUITEMS.map(item => {
 const Menu = () => {
   return (
     <div className={classes.menu}>
-      <h1>Menu</h1>
+      <h1>Genki Menu</h1>
       <hr/>
       {menuItems}
+      <h3>All Items On Our Menu Are 100% Vegan</h3>
     </div>
   )
 }

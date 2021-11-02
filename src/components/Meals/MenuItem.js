@@ -18,7 +18,7 @@ const addToCart = amount => {
   return (
     <div className={classes.item}>
       <div className={classes.left}>
-        <img src={img} alt={name} />
+        <img src={img} alt={name} className={classes.image} />
         <div className={classes.info}>
           <h1>{name}</h1>
           <h2 className={classes.details}>{description}</h2>

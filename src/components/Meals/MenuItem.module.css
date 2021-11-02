@@ -1,13 +1,11 @@
 .item {
-  width: 95%;
-  border: 0.1px solid #0a7336;
-  border-radius: 1em;
-  margin: 0.5em;
+  width: 100%;
+  border: 1px solid #00B8A9;
   padding: 0.5em;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #f6e9d8;
+  background-color: #F8F3D4;
 }
 
 .left {
@@ -20,16 +18,16 @@
   flex-direction: column;
 }
 
+
 h1 {
   margin-bottom: 0.2em;
   margin-top: 0.2em;
 }
 
 img {
-  height: 8em;
+  height: 10rem;
   width: 8em;
-  border-radius: 1em;
-  margin: 0.5em;
+  border-radius: 10px;
 }
 
 .info {
@@ -37,7 +35,7 @@ img {
 }
 
 .details {
-  color: #0a7336;
+  color: #00B8A9;
   margin: 0;
 }
 

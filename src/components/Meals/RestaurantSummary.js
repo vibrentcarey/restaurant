@@ -4,11 +4,10 @@ const RestaurantSummary = () => {
   return (
     <div className={classes.summary}>
       <h1>Healthy And Convenient</h1>
-      <h2>Here at GreenBite we are dedicated to prepping and 
+      <h2>Here at Genki we are dedicated to prepping and 
       delivering
-      healthy meals that work with your busy schedule. <br/></h2>
-      <h2>Our menu is below, and you are only a few clicks away
-      <br/> from being a happier and healthier you!
+      Vegan Sushi that works with your busy schedule. <br/></h2>
+      <h2>Our menu is below, and you are only a few clicks away from being a happier and healthier you!
       </h2>
     </div>
   )

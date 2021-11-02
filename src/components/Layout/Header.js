@@ -16,7 +16,7 @@ const Header = ({ toggleCart }) => {
     <header className={classes.header}>
 
       <div className={classes.left}>
-        <span className={classes.restaurant}>Green Bite</span>
+        <span className={classes.restaurant}>Genki</span>
       </div>
 
       <div className={classes.right}>

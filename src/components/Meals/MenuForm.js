@@ -18,7 +18,7 @@ const MenuForm = ({addToCart}) => {
   return (
     <div className={classes.form}>
       <form>
-        <span>Amount x</span>
+        <span>Amount </span>
         <input type='number' placeholder={0} ref={amountInputRef}/>
       </form>
       <br/>

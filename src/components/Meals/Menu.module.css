@@ -1,12 +1,16 @@
 .menu {
   width: 80vw;
-  background-color: #faf1e6;
+  background-color: #00B8A9;
   margin: 4em;
-  margin-bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #064420;
+  color: #F6416C;
   border-radius: 1em;
-  /* overflow: scroll; */
+  padding: 0.6rem;
+}
+
+hr {
+  border: 1px solid #F6416C;
+  margin-bottom: 2rem;
 }

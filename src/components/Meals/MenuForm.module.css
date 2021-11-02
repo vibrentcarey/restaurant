@@ -16,20 +16,20 @@ justify-content: center;
 }
 
 .submit {
-  background-color: #054420;
+  background-color: #F6416C;
   width: 50%;
   height: 2em;
   border-radius: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
-  color:#F9F1E6;
+  color:#FFDE7D;
   font-size: large;
 }
 
 .submit:hover {
   cursor: pointer;
-  background-color: #0a7336;
+  background-color: #e80b40;
 }
 
 @media screen and (max-width:450px) {

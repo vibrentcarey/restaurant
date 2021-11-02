@@ -1,10 +1,10 @@
-.App{
-display: flex;
-flex-direction: column;
-align-items: center;
-background-color: #fdfaf6;
-font-family: 'Odibee Sans', cursive;
-height: 100vh;
-width: 100vw;
-overflow: scroll;
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F8F3D4;
+  font-family: 'Hahmlet', serif;
+  height: 100vh;
+  width: 100vw;
+  overflow: scroll;
 }
