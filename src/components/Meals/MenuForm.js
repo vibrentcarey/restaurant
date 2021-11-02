@@ -20,7 +20,7 @@ const MenuForm = ({addToCart}) => {
       <form>
       {/* TODO: ADD FORM VALIDATION */}
         <span>Amount:</span>
-        <input type='number' min='0' max='10' placeholder={0} ref={amountInputRef}/>
+        <input type='number' pattern="[0-9]*" min='0' max='10' placeholder={0} ref={amountInputRef}/>
       </form>
       <br/>
       <div onClick={formSubmit} className={classes.submit} type='submit'>Add To Cart</div>
