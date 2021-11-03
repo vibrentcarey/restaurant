@@ -39,7 +39,7 @@ const Menu = () => {
       <h1>Genki Menu</h1>
       <hr/>
       {menuItems}
-      <h3>All Items On Our Menu Are 100% Vegan</h3>
+      <h3>All Sushi On Our Menu Is 100% Vegan</h3>
     </div>
   )
 }
