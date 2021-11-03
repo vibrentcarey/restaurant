@@ -15,8 +15,8 @@ const MENUITEMS = [
   },
   {
     id: 'm2',
-    name: 'Sushi',
-    description: 'Avocado Roll',
+    name: 'Avocado Roll',
+    description: '6 pieces: avocado, cucumber, sesame seeds',
     price: 12.99,
     img: sushi
   },
