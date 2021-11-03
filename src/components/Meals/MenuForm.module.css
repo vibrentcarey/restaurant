@@ -16,7 +16,7 @@ form {
 }
 
 .submit {
-  background-color: #f6416c;
+  background-color: #e80b40;
   width: 50%;
   height: 2em;
   border-radius: 1em;
@@ -25,16 +25,18 @@ form {
   align-items: center;
   color: #ffde7d;
   font-size: large;
+  /* #57 by Facebook */
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
 .submit:hover {
   cursor: pointer;
-  background-color: #e80b40;
+  background-color: #d80a3c;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 900px) {
   .submit {
-    width: 60%;
+    width: 50%;
     font-size: small;
   }
 
