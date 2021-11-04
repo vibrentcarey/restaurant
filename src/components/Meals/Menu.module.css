@@ -1,12 +1,12 @@
 .menu {
   width: 80%;
-  background-color: #00B8A9;
+  background-color: #00c9b9;
   margin: 4em;
   display: flex;
   flex-direction: column;
   margin-bottom: 8rem;
   align-items: center;
-  color: #F6416C;
+  color: #E80B40;
   border-radius: 1em;
   padding: 0.6rem;
   max-width: 1000px;
@@ -14,7 +14,7 @@
 }
 
 hr {
-  border: 1px solid #F6416C;
+  border: 1px solid #E80B40;
   margin-bottom: 2rem;
 }
 
