@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import CartContext from '../../store/cart-context'
-import classes from './Cart.module.css'
+import './Cart.css'
 import Modal from './Modal'
 
 
@@ -15,17 +15,17 @@ const Cart = ({ toggleCart }) => {
     cartContext.removeItem(id)
   }
 
-  //Extract the properties from the items array
+  // Cart Items
   const cartItems = cartContext.items.map(item => {
-    return <div className={classes.item}>
-      <div className={classes.cartInfo}>
-        <h1 className={classes.cartHeading}>{item.name} x{item.amount}</h1>
-        <h2 className={classes.cart__price}>${item.price}</h2>
+    return <div className="item">
+      <div className="item__info">
+        <h2 className="item__heading">{item.name} x{item.amount}</h2>
+        <h3 className="item__price">${item.price}</h3>
       </div>
-      <div className={classes.itemForm}>
-      {/* TODO: NO NEGATIVE VALUES HERE AND LIMIT MAX */}
-        <button onClick={() => removeItem(item.id)} id={classes.remove} className={classes.cartButton}>-</button>
-        <button onClick={() => addItem(item)} className={classes.cartButton}>+</button>
+      <div className="item__form">
+        {/* TODO: NO NEGATIVE VALUES HERE AND LIMIT MAX */}
+        <button onClick={() => removeItem(item.id)} className="item__button item__button--remove">-</button>
+        <button onClick={() => addItem(item)} className="item__button">+</button>
       </div>
     </div>
   })
@@ -34,25 +34,25 @@ const Cart = ({ toggleCart }) => {
 
   return (
     <Modal>
-      <div className={classes.cart}>
+      <div className="cart">
 
-        <div className={classes.header}>
+        <div className="cart__header">
           <h1>Your Cart</h1>
         </div>
-        <hr className={classes.line}/>
+        <hr className="cart__line" />
 
-        <div className={classes.body}>
+        <div className="cart__main">
           {cartItems}
         </div>
 
-        <div className={classes.footer}>
-          <div className={classes.total}>
+        <div className="cart__footer">
+          <div className="cart__total">
             <h1>Total: ${totalAmount.toFixed(2)}</h1>
           </div>
-          <div className={classes.buttons}>
-            <button onClick={toggleCart} id={classes.close} className={classes.button}>Close</button>
+          <div className="cart__buttons">
+            <button onClick={toggleCart} className="cart__button cart__button--close">Close</button>
             {/* TODO: ADD FEEDBACK AND CLOSE FORM AFTER ORDER */}
-            <button className={classes.button}>Order</button>
+            <button className="cart__button">Order</button>
           </div>
         </div>
 

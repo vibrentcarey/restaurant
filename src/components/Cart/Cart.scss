@@ -1,0 +1,160 @@
+@import "../../scss/partials/mixins";
+
+// Animation 
+@keyframes slide-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+// Cart Styles
+.cart {
+  @include flex_direction_align_justify(column, center);
+  animation: slide-in 1s;
+  background-color: #00c9b9;
+  width: 70%;
+  height: 60%;
+  border-radius: 1em;
+  color: #e80b40;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+  max-width: 500px;
+  max-height: 700px;
+
+  @include mobile() {
+    width: 90vw;
+    height: 70vh;
+  }
+
+  &__line {
+    border: 2px solid #e80b40;
+    width: 80%;
+  }
+
+  &__main {
+    @include flex_direction_align_justify(column, center, flex-start);
+    width: 100%;
+    height: 60%;
+    background-color: #f8f3d4;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+
+  &__footer {
+    @include flex_direction_align_justify(row, center, space-between);
+    width: 100%;
+    height: 22%;
+  }
+
+  &__total {
+    margin: 1.25rem;
+  }
+
+  &__buttons {
+    @include flex_direction_align_justify(row, flex-end);
+    height: 90%;
+    width: 70%;
+    flex-wrap: wrap;
+  }
+
+  &__button {
+    background-color: #e80b40;
+    font-size: x-large;
+    border-radius: 1em;
+    border: none;
+    margin: 0.2em;
+    width: 5em;
+    height: 1.5em;
+    color: #ffde7d;
+    /* #57 by Facebook */
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+      rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+      rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #d80a3c;
+    }
+
+    &--close {
+      background-color: #f8f3d4;
+      color: #00b8a9;
+      box-shadow: none;
+
+      &:hover {
+        background-color: #c4dccb;
+      }
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00b8a9;
+}
+
+// Cart Item Styles
+.item {
+  @include flex_direction_align_justify(row, center, space-between);
+  width: 98%;
+  border: 1px solid #00b8a9;
+  padding: 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  &__info {
+    margin-left: 1em;
+  }
+
+  &__heading {
+    margin: 0.4rem 0;
+    color: #e80b40;
+  }
+
+  &__price {
+    color: #00b8a9;
+  }
+
+  &__form {
+    margin: 1em;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__button {
+    margin: 0.6rem;
+    height: 2rem;
+    width: 2.2rem;
+    font-size: large;
+    background-color: #e80b40;
+    color: #ffde7d;
+    border: none;
+    border-radius: 50%;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #d80a3c;
+    }
+
+    &--remove {
+      background-color: #e4efe7;
+      color: #00b8a9;
+      border: 1px solid #00b8a9;
+
+      &:hover {
+        background-color: #c4dccb;
+      }
+    }
+  }
+}
