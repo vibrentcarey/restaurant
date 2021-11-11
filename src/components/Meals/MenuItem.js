@@ -1,33 +1,33 @@
 import { useContext } from "react"
 import CartContext from "../../store/cart-context"
 import MenuForm from "./MenuForm"
-import classes from "./MenuItem.module.css"
+import "./MenuItem.css"
 
 const MenuItem = ({ id, name, description, price, img }) => {
-const cartContext = useContext(CartContext)
+  const cartContext = useContext(CartContext)
 
-//Call the add function from our context and pass the item object
-const addToCart = amount => {
-  cartContext.addItem({
-    id,
-    name,
-    amount,
-    price
-  })
-}
+  //Call the add function from our context and pass the item object
+  const addToCart = amount => {
+    cartContext.addItem({
+      id,
+      name,
+      amount,
+      price
+    })
+  }
   return (
-    <div className={classes.item}>
-      <div className={classes.left}>
-        <img src={img} alt={name} className={classes.image} />
-        <div className={classes.info}>
-          <h1 className={classes.menu__item__header}>{name}</h1>
+    <div className="menu_item">
+      <div className="menu_item__left">
+        <img src={img} alt={name} className="menu_item__image" />
+        <div className="menu_item__info">
+          <h2 className="menu_item__title">{name}</h2>
           {/* TODO: ADD INGREDIENTS AND CHANGE PRICE COLOUR */}
-          <h2 className={classes.details}>{description}</h2>
-          <h2 className={classes.details}>${price}</h2>
+          {/* <h3 className="menu_item__description">{description}</h3> */}
+          <h3 className="menu_item__price"> ${price}</h3>
         </div>
       </div>
-      <div className={classes.right}>
-        <MenuForm addToCart={addToCart}/>
+      <div className="menu_item__right">
+        <MenuForm addToCart={addToCart} />
       </div>
     </div>
   )

@@ -1,0 +1,41 @@
+@import "../../scss/partials/mixins";
+
+.menu_item {
+  @include flex_direction_align_justify(row, center, space-between);
+  width: 100%;
+  border: 1px solid #00B8A9;
+  padding: 0.5em;
+  background-color: #F8F3D4;
+
+  &__left {
+    @include flex_direction_align_justify(row, center);
+    width: 60%;
+  }
+
+  &__right {
+    @include flex_direction_align_justify(column);
+    width: 30%;
+  }
+
+  &__info {
+    margin-left: 1rem;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #e80b40;
+  }
+
+  &__image {
+    height: 6rem;
+    width: 5em;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  &__price {
+    color: #00B8A9;
+    margin: 0.4rem 0;
+  }
+}

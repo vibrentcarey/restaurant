@@ -1,26 +1,20 @@
+@import "../../scss/partials/mixins";
+
 .menu {
-  width: 80%;
+  @include flex_direction_align_justify(column, center);
+  width: 90%;
   background-color: #00c9b9;
   margin: 4em;
-  display: flex;
-  flex-direction: column;
   margin-bottom: 8rem;
-  align-items: center;
   color: #E80B40;
   border-radius: 1em;
   padding: 0.6rem;
-  max-width: 1000px;
+  max-width: 600px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
 
-hr {
-  border: 1px solid #E80B40;
-  margin-bottom: 2rem;
-}
-
-@media screen  and (max-width: 500px){
-  .menu{
-    width: 90%;
+  &__line {
+    border: 2px solid #E80B40;
+    margin-bottom: 2rem;
+    width: 80%;
   }
-  
 }

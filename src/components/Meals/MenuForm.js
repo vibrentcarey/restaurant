@@ -1,7 +1,7 @@
 import { useRef } from "react"
-import classes from "./MenuForm.module.css"
+import "./MenuForm.css"
 
-const MenuForm = ({addToCart}) => {
+const MenuForm = ({ addToCart }) => {
   //useRef to reference our input value since we only need it on submit
   const amountInputRef = useRef()
 
@@ -12,19 +12,19 @@ const MenuForm = ({addToCart}) => {
     const enteredAmountNumber = +enteredAmount
 
     addToCart(enteredAmountNumber)
-  
+
   }
 
   return (
-    <div className={classes.form}>
-      <form>
+    <form className="menu_form">
       {/* TODO: ADD FORM VALIDATION */}
-        <span>Amount:</span>
-        <input type='number' pattern="[0-9]*" min='0' max='10' placeholder={0} ref={amountInputRef}/>
-      </form>
-      <br/>
-      <div onClick={formSubmit} className={classes.submit} type='submit'>Add To Cart</div>
-    </div>
+      <section className="menu_form__enter">
+      <h3 class="menu_form__title">Amount</h3>
+      <input className="menu_form__input" type='number' pattern="[0-9]*" min='0' max='10' placeholder={1} ref={amountInputRef} />
+      </section>
+      <br />
+      <button onClick={formSubmit} className="menu_form__submit">Add To Cart</button>
+    </form>
   )
 }
 

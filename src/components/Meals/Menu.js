@@ -1,8 +1,8 @@
-import classes from './Menu.module.css'
 import MenuItem from './MenuItem'
 import salad from '../../assets/salad.jpg'
 import sushi from '../../assets/sushi.jpg'
 import burger from '../../assets/veganBurger.jpg'
+import  './Menu.css'
 
 
 const MENUITEMS = [
@@ -16,7 +16,7 @@ const MENUITEMS = [
   {
     id: 'm2',
     name: 'Avocado Roll',
-    description: '6 pieces: avocado, cucumber, sesame seeds',
+    description: 'avocado, cucumber, sesame seeds',
     price: 12.99,
     img: sushi
   },
@@ -35,11 +35,11 @@ const menuItems = MENUITEMS.map(item => {
 
 const Menu = () => {
   return (
-    <div className={classes.menu}>
-      <h1>Genki Menu</h1>
-      <hr/>
+    <div className="menu">
+      <h1 className="menu__title">Genki Menu</h1>
+      <hr className="menu__line"/>
       {menuItems}
-      <h3>All Sushi On Our Menu Is 100% Vegan</h3>
+      <h3 className="menu__subtitle">All Sushi On Our Menu Is 100% Vegan</h3>
     </div>
   )
 }
