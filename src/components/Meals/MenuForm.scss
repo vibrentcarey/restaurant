@@ -38,5 +38,10 @@
     margin: 0.2em;
     font-size: 16px;
     height: 20px;
+
+    &--invalid {
+      border: 1px solid #E80B40;
+      background-color: lighten($color: #E80B40, $amount: 30);
+    }
   }
 }

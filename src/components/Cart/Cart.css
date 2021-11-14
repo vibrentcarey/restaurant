@@ -95,7 +95,7 @@
 }
 
 .cart__total {
-  margin: 1.25rem;
+  margin: 0 1.25rem;
 }
 
 .cart__buttons {
@@ -113,7 +113,7 @@
       -ms-flex-pack: start;
           justify-content: flex-start;
   height: 90%;
-  width: 70%;
+  width: 80%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }

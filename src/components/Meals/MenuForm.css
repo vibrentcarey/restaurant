@@ -89,4 +89,9 @@
   font-size: 16px;
   height: 20px;
 }
+
+.menu_form__input--invalid {
+  border: 1px solid #E80B40;
+  background-color: #fa92ab;
+}
 /*# sourceMappingURL=MenuForm.css.map */
