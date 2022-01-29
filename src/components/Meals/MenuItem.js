@@ -15,20 +15,22 @@ const MenuItem = ({ id, name, description, price, img }) => {
     })
   }
   return (
-    <div className="menu_item">
-      <div className="menu_item__left">
-        <img src={img} alt={name} className="menu_item__image" />
-        <div className="menu_item__info">
-          <h2 className="menu_item__title">{name}</h2>
-          {/* TODO: ADD INGREDIENTS AND CHANGE PRICE COLOUR */}
-          {/* <h3 className="menu_item__description">{description}</h3> */}
-          <h3 className="menu_item__price"> ${price}</h3>
-        </div>
-      </div>
-      <div className="menu_item__right">
-        <MenuForm addToCart={addToCart} />
-      </div>
-    </div>
+    // <div className="menu_item">
+    //   <div className="menu_item__left">
+    //     <img src={img} alt={name} className="menu_item__image" />
+    //     <div className="menu_item__info">
+    //       <h2 className="menu_item__title">{name}</h2>
+    //       {/* TODO: ADD INGREDIENTS AND CHANGE PRICE COLOUR */}
+    //       {/* <h3 className="menu_item__description">{description}</h3> */}
+    //       <h3 className="menu_item__price"> ${price}</h3>
+    //     </div>
+    //   </div>
+    //   <div className="menu_item__right">
+    //     <MenuForm addToCart={addToCart} />
+    //   </div>
+    // </div>
+    <div></div>
+
   )
 }
 
