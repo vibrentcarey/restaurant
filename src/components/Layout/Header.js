@@ -1,4 +1,3 @@
-import classes from './Header.module.css'
 import { FaShoppingCart } from 'react-icons/fa'
 import CartContext from '../../store/cart-context'
 import { useContext } from 'react'
@@ -13,20 +12,17 @@ const Header = ({ toggleCart }) => {
   }, 0)
 
   return (
-    <header className={classes.header}>
-
-      <div className={classes.left}>
-        <span className={classes.restaurant}>Genki</span>
+    <header class="navbar mb-2 shadow-lg bg-neutral text-neutral-content rounded-sm px-4 sm:px-8 md:px-12">
+      <div class="flex-1 px-2 mx-2">
+        <span class="text-lg font-bold">
+          Green Bite
+        </span>
       </div>
-
-      <div className={classes.right}>
-        <div className={classes.button} onClick={toggleCart}>
-          <FaShoppingCart className={classes.cart} />
-          <span className={classes.cart}>Cart</span>
-          <span id={classes.total} className={classes.cart}>{numberOfCartItems}</span>
+      <div class="flex-none">
+        <div className='' onClick={toggleCart}>
+          <button class="btn btn-primary">Cart<FaShoppingCart className='ml-2 mr-1' />{numberOfCartItems}</button>
         </div>
       </div>
-
     </header>
   )
 }

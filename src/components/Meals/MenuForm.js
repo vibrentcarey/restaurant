@@ -1,5 +1,4 @@
 import { useRef, useState } from "react"
-import "./MenuForm.css"
 
 const MenuForm = ({ addToCart }) => {
   const [inputIsValid, setinputIsValid] = useState(true);

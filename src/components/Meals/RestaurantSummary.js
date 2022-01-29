@@ -1,15 +1,22 @@
-import classes from "./RestaurantSummary.module.css"
+import image from '../../green_bite.jpeg'
 
 const RestaurantSummary = () => {
   return (
-    <div className={classes.summary}>
-      <h1>Healthy And Convenient</h1>
-      <h2>Here at Genki we are dedicated to prepping and 
-      delivering
-      Vegan Sushi that works with your busy schedule. <br/></h2>
-      <h2>Our menu is below, and you are only a few clicks away from being a happier and healthier you!
-      </h2>
+    <div class="card lg:card-side card-bordered prose p-2"> 
+      <figure className="mb-0 h-full overflow-hidden">
+        <img src={image} className='object-contain h-64 rounded-lg m-1'/>
+      </figure>
+      <div class="card-body">
+        <h2 className="mt-0">Healthy And Convenient</h2>
+        <p>Here at Genki we are dedicated to prepping and
+          delivering Vegan Meals that work with your busy schedule. <br /></p>
+        <div class="card-actions mt-0">
+          <button class="btn btn-primary">Get Started</button>
+        </div>
+      </div>
     </div>
+
+
   )
 }
 

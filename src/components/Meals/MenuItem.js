@@ -1,7 +1,6 @@
 import { useContext } from "react"
 import CartContext from "../../store/cart-context"
 import MenuForm from "./MenuForm"
-import "./MenuItem.css"
 
 const MenuItem = ({ id, name, description, price, img }) => {
   const cartContext = useContext(CartContext)

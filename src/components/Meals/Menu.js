@@ -2,7 +2,6 @@ import MenuItem from './MenuItem'
 import salad from '../../assets/salad.jpg'
 import sushi from '../../assets/sushi.jpg'
 import burger from '../../assets/veganBurger.jpg'
-import  './Menu.css'
 
 
 const MENUITEMS = [

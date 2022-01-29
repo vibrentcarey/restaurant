@@ -1,7 +1,6 @@
 import { useContext, useState } from 'react'
 import CartContext from '../../store/cart-context'
 import ClipLoader from "react-spinners/ClipLoader";
-import './Cart.css'
 import Modal from './Modal'
 
 

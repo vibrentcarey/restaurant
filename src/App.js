@@ -14,9 +14,10 @@ function App() {
   }
   return (
     <CartProvider>
-      <div className="App">
-        {showCart && <Cart toggleCart={handleCartToggle} />}
         <Header toggleCart={handleCartToggle} />
+
+      <div className="p-4 sm:p-8 md:p-12 flex flex-col items-center">
+        {showCart && <Cart toggleCart={handleCartToggle} />}
         <RestaurantSummary />
         <Menu />
       </div>
