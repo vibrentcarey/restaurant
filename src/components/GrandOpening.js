@@ -4,7 +4,7 @@ const GrandOpening = () => {
   const [count, setCount] = useState(59)
   useEffect(() => {
     const interval = setInterval(() => {
-      setCount(count => count = count - 1)
+      setCount(count => count === 0 ? count === 0 : count = count - 1)
     }, 1000)
 
     return (() => {
@@ -23,13 +23,13 @@ const GrandOpening = () => {
 
             <span className='text-primary' style={{ '--value': 0 }}></span>m
 
-            <span className='text-primary' style={{ '--value': count > 0 || '00' }}></span>s
+            <span className='text-primary' style={{ '--value': count }}></span>s
 
           </span>
-          </div>
         </div>
       </div>
-      );
+    </div>
+  );
 };
 
-      export default GrandOpening;
+export default GrandOpening;

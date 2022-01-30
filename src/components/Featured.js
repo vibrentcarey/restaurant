@@ -1,24 +1,38 @@
 import React from 'react';
+import classNames from 'classnames'
 
-const Featured = () => {
+
+const Featured = (props) => {
+  const cardClass = classNames({
+    'bg-primary': props.primary,
+    'bg-secondary': props.secondary,
+    'bg-accent': props.accent,
+  });
+
   return (
-
-    <div class="card card-bordered max-w-xs m-2 prose">
-      <figure>
-        <img src="https://picsum.photos/id/1005/400/250" className='m-0' />
-      </figure>
-      <div class="card-body pt-0">
-        <h2 class="card-title">Top image
-          <div class="badge mx-2 badge-secondary">NEW</div>
-        </h2>
-        <p>Rerum reiciendis beatae tenetur excepturi aut pariatur est eos. Sit sit necessitatibus veritatis sed molestiae voluptates incidunt iure sapiente.</p>
+    <div class={`card shadow-2xl lg:card-side ${cardClass} `}>
+      <div class="card-body">
+        <header className='flex items-center mb-4'>
+          <div class="avatar">
+            <div class="rounded-full w-14 h-14 ring-offset-base-100 ring-offset-2">
+              <img src={`http://daisyui.com/tailwind-css-component-profile-${props.profile}@56w.png` }/>
+            </div>
+          </div>
+          <h3 className={`mx-2 text-lg font-semibold ${props.primary && 'text-primary-content'}`}>{props.title}</h3>
+        </header>
+        <div className='prose'>
+        <p className={props.primary && 'text-primary-content'} >{props.review}</p>
         <div class="justify-end card-actions">
-          <div data-tip="Price: $" class="tooltip">
-            <button class="btn btn-secondary">More info</button>
+          <div class="rating rating-sm">
+            <input type="radio" name="rating-6" class="mask mask-star-2 bg-warning" />
+            <input type="radio" name="rating-6" checked="checked" class="mask mask-star-2 bg-warning" />
+            <input type="radio" name="rating-6" checked="checked" class="mask mask-star-2 bg-warning" />
+            <input type="radio" name="rating-6" checked="checked" class="mask mask-star-2 bg-warning" />
+            <input type="radio" name="rating-6" checked={false} class="mask mask-star-2 bg-warning" />
           </div>
         </div>
       </div>
-    </div>
+    </div></div>
   )
 }
 export default Featured;

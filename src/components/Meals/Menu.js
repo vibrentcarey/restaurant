@@ -40,8 +40,14 @@ const Menu = () => {
     //   {menuItems}
     //   <h3 className="menu__subtitle">All Sushi On Our Menu Is 100% Vegan</h3>
     // </div>
-
-<div></div>
+    <div>
+      <div class="tabs">
+        <a class="tab tab-bordered">Tab 1</a>
+        <a class="tab tab-bordered tab-active">Tab 2</a>
+        <a class="tab tab-bordered">Tab 3</a>
+      </div>
+      <MenuItem/>
+    </div>
   )
 }
 
