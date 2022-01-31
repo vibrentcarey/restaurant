@@ -1,7 +1,7 @@
-import { useContext, useRef} from "react"
+import { useContext, useRef } from "react"
 import CartContext from "../../store/cart-context"
-import MenuForm from "./MenuForm"
 import { MdAttachMoney, MdAdd } from 'react-icons/md'
+
 const MenuItem = ({ menuItem }) => {
   const { id, name, price, description, img } = menuItem;
   const cartContext = useContext(CartContext)
@@ -38,23 +38,23 @@ const MenuItem = ({ menuItem }) => {
     // </div>
 
     <div class="card sm:card-side card-bordered max-w-2xl mb-8 mt-1">
-      <figure>
-        <img className="object-cover h-48 max-w-2 " src={img} />
-      </figure>
+        <figure>
+          <img className="object-cover h-48 max-w-2 " src={img} alt='food'/>
+        </figure>
       <div class="card-body">
         <h2 class="card-title">{name}
           <div class="badge mx-2 bg-primary">NEW</div>
         </h2>
         <p>{description}</p>
         <form class=" m-1 flex flex-col">
-        <input className="w-12 my-2 px-2" type='number' placeholder="0" ref={amountInputRef}/>
-        <div>
-          <div data-tip="Add To Cart" class="tooltip tooltip-primary tooltip-bottom">
-            <button onClick={submitForm} class="btn btn-primary btn-sm mr-2"><MdAdd className="text-xl" /></button>
-          </div>
-          <div data-tip={price} class="tooltip tooltip-secondary tooltip-bottom">
-            <button class="btn btn-ghost btn-sm"><MdAttachMoney className="text-xl" /></button>
-          </div>
+          <input className="w-12 my-2 px-2" type='number' placeholder="0" ref={amountInputRef} />
+          <div>
+            <div data-tip="Add To Cart" class="tooltip tooltip-primary tooltip-bottom">
+              <button onClick={submitForm} class="btn btn-primary btn-sm mr-2"><MdAdd className="text-xl" /></button>
+            </div>
+            <div data-tip={price} class="tooltip tooltip-secondary tooltip-bottom">
+              <button class="btn btn-ghost btn-sm"><MdAttachMoney className="text-xl" /></button>
+            </div>
           </div>
         </form>
       </div>

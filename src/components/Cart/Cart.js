@@ -1,7 +1,6 @@
 import { useContext, useState } from 'react'
 import CartContext from '../../store/cart-context'
 import PacmanLoader from "react-spinners/PacmanLoader";
-import Modal from './Modal'
 import { MdAdd } from 'react-icons/md'
 import { BiMinus } from 'react-icons/bi'
 
@@ -57,7 +56,7 @@ const Cart = ({ toggleCart }) => {
           <h2 className='mb-1'>Your Cart</h2>
           <div class="divider"></div>
           {cartItems}
-
+          {cartItems.length === 0 && <p>Your cart is empty!</p>}
           <div class="divider"></div>
 
           <h2 className='mt-1'>Total: ${totalAmount.toFixed(2)}</h2>

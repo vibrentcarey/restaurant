@@ -8,6 +8,8 @@ import Header from './components/Layout/Header';
 import Menu from './components/Meals/Menu';
 import RestaurantSummary from './components/Meals/RestaurantSummary';
 import CartProvider from './store/CartProvider';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+import "animate.css/animate.min.css";
 
 function App() {
   const [showCart, setshowCart] = useState(false)
@@ -24,7 +26,9 @@ function App() {
           <div className='prose lg:prose-lg mt-8'>
             <h1 className='underline'>Green Bite</h1>
           </div>
-          <RestaurantSummary />
+          <AnimationOnScroll animateIn="animate__fadeInLeft" animateOut='animate__fadeOutLeft'>
+            <RestaurantSummary />
+          </AnimationOnScroll>
           {/* <Menu /> */}
         </div>
 
@@ -34,13 +38,15 @@ function App() {
           <div className='prose mb-10'>
             <h2 className='text-center underline'>Menu</h2>
           </div>
-          <Menu />
+          <AnimationOnScroll animateIn="animate__zoomIn" animateOut="animate__zoomOut">
+            <Menu />
+          </AnimationOnScroll>
         </section>
         <div class="divider my-8"></div>
 
         <section className='w-full flex flex-col items-center'>
           <div className='prose lg:prose-lg'>
-            <h2 className='text-center underline'>Reviews</h2>
+            <h2 className='text-center underline sm:mt-8'>Reviews</h2>
           </div>
           <div className='grid md:grid-cols-3 gap-6 my-12 '>
             <Featured primary profile='2' title="John Smith" review="This place is amazing, I come here at least once a week." />
@@ -49,12 +55,14 @@ function App() {
 
           </div>
         </section>
-        <div class="divider my-8"></div>
+        <div class="divider my-14"></div>
 
         <section>
-          <GrandOpening />
+          <AnimationOnScroll animateIn='animate__zoomIn' animateOut='animate__zoomOut'>
+            <GrandOpening />
+          </AnimationOnScroll>
         </section>
-        <div class="divider my-8"></div>
+        <div class="divider my-14"></div>
       </main>
       <Footer />
     </CartProvider>
