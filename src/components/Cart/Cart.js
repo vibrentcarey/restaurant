@@ -1,12 +1,12 @@
-import { useContext, useState } from 'react'
+import { useContext, } from 'react'
 import CartContext from '../../store/cart-context'
-import PacmanLoader from "react-spinners/PacmanLoader";
+// import PacmanLoader from "react-spinners/PacmanLoader";
 import { MdAdd } from 'react-icons/md'
 import { BiMinus } from 'react-icons/bi'
 
 const Cart = ({ toggleCart }) => {
-  const [orderLoading, setorderLoading] = useState(false);
-  const [orderComplete, setOrderComplete] = useState(false);
+  // const [orderLoading, setorderLoading] = useState(false);
+  // const [orderComplete, setOrderComplete] = useState(false);
 
   const cartContext = useContext(CartContext)
 
@@ -50,11 +50,13 @@ const Cart = ({ toggleCart }) => {
 
         <h2 className='mt-1'>Total: ${totalAmount.toFixed(2)}</h2>
       </div>
-      <div className='m-4'>
+      {/* <div className='m-4'>
         {orderLoading && <PacmanLoader color="#5C7F67" />}
         {orderComplete && <h3 className='text-primary'>Your order has been processed!</h3>}
       </div>
+    </> */}
     </>
+    
   )
 }
 

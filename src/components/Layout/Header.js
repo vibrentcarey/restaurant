@@ -1,7 +1,6 @@
 import { FaShoppingCart } from 'react-icons/fa'
 import CartContext from '../../store/cart-context'
 import { useContext } from 'react'
-import Modal from '../Cart/Modal'
 
 const Header = ({ toggleCart }) => {
   //Store the result of useContext for later use

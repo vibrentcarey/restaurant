@@ -1,10 +1,8 @@
 
 import { useContext, useState } from 'react'
 import Modal from "@material-tailwind/react/Modal";
-import ModalHeader from "@material-tailwind/react/ModalHeader";
 import ModalBody from "@material-tailwind/react/ModalBody";
 import ModalFooter from "@material-tailwind/react/ModalFooter";
-import Button from "@material-tailwind/react/Button";
 import CartContext from '../../store/cart-context'
 import PacmanLoader from "react-spinners/PacmanLoader";
 import { MdAdd } from 'react-icons/md'
