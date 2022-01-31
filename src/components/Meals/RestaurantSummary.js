@@ -2,7 +2,7 @@ import image from '../../green_bite.jpeg'
 
 const RestaurantSummary = () => {
   return (
-    <div class="card md:card-side card-bordered prose p-2 sm:p-4 mt-12"> 
+    <div class="card md:card-side card-bordered prose p-2 sm:p-4 my-12"> 
       <figure className="my-0 h-full overflow-hidden ">
         <img src={image} className='h-64 my-0 rounded-lg '/>
       </figure>

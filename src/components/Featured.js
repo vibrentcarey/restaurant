@@ -10,7 +10,7 @@ const Featured = (props) => {
   });
 
   return (
-    <div class={`card shadow-2xl lg:card-side ${cardClass} `}>
+    <div class={`card max-w-md shadow-2xl lg:card-side ${cardClass} `}>
       <div class="card-body">
         <header className='flex items-center mb-4'>
           <div class="avatar">

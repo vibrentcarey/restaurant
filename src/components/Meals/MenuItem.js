@@ -1,11 +1,12 @@
-import { useContext } from "react"
+import { useContext, useRef} from "react"
 import CartContext from "../../store/cart-context"
 import MenuForm from "./MenuForm"
-
-const MenuItem = ({ id, name, description, price, img }) => {
+import { MdAttachMoney, MdAdd } from 'react-icons/md'
+const MenuItem = ({ menuItem }) => {
+  const { id, name, price, description, img } = menuItem;
   const cartContext = useContext(CartContext)
 
-  //Call the add function from our context and pass the item object
+  // Call the add function from our context and pass the item object
   const addToCart = amount => {
     cartContext.addItem({
       id,
@@ -13,6 +14,12 @@ const MenuItem = ({ id, name, description, price, img }) => {
       amount,
       price
     })
+  }
+  const amountInputRef = useRef()
+  const submitForm = (e) => {
+    e.preventDefault();
+    const amount = amountInputRef.current.value
+    addToCart(+amount)
   }
   return (
     // <div className="menu_item">
@@ -30,21 +37,28 @@ const MenuItem = ({ id, name, description, price, img }) => {
     //   </div>
     // </div>
 
-<div class="card lg:card-side card-bordered">
-  <figure>
-    <img src="https://picsum.photos/id/1005/400/250"/>
-  </figure> 
-  <div class="card-body">
-    <h2 class="card-title">Horizontal
-      <div class="badge mx-2">NEW</div>
-    </h2> 
-    <p>Rerum reiciendis beatae tenetur excepturi aut pariatur est eos. Sit sit necessitatibus veritatis sed molestiae voluptates incidunt iure sapiente.</p> 
-    <div class="card-actions">
-      <button class="btn btn-primary">Get Started</button> 
-      <button class="btn btn-ghost">More info</button>
+    <div class="card sm:card-side card-bordered max-w-2xl mb-8 mt-1">
+      <figure>
+        <img className="object-cover h-48 max-w-2 " src={img} />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">{name}
+          <div class="badge mx-2 bg-primary">NEW</div>
+        </h2>
+        <p>{description}</p>
+        <form class=" m-1 flex flex-col">
+        <input className="w-12 my-2 px-2" type='number' placeholder="0" ref={amountInputRef}/>
+        <div>
+          <div data-tip="Add To Cart" class="tooltip tooltip-primary tooltip-bottom">
+            <button onClick={submitForm} class="btn btn-primary btn-sm mr-2"><MdAdd className="text-xl" /></button>
+          </div>
+          <div data-tip={price} class="tooltip tooltip-secondary tooltip-bottom">
+            <button class="btn btn-ghost btn-sm"><MdAttachMoney className="text-xl" /></button>
+          </div>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
-</div>
 
   )
 }
