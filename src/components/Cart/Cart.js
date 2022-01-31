@@ -1,8 +1,9 @@
 import { useContext, useState } from 'react'
 import CartContext from '../../store/cart-context'
-import ClipLoader from "react-spinners/ClipLoader";
+import PacmanLoader from "react-spinners/PacmanLoader";
 import Modal from './Modal'
-
+import { MdAdd } from 'react-icons/md'
+import { BiMinus } from 'react-icons/bi'
 
 const Cart = ({ toggleCart }) => {
   const [orderLoading, setorderLoading] = useState(false);
@@ -32,16 +33,17 @@ const Cart = ({ toggleCart }) => {
 
   // Cart Items
   const cartItems = cartContext.items.map(item => {
-    return <div className="item">
-      <div className="item__info">
-        <h2 className="item__heading">{item.name} x{item.amount}</h2>
-        <h3 className="item__price">${item.price}</h3>
+    return <div>
+      <div className="flex items-center">
+        <h3 className="m-1 text-primary">{item.name} x{item.amount}</h3>
+        <h3 className="m-1">${item.price}</h3>
+        <div className="item__form">
+          {/* TODO: NO NEGATIVE VALUES HERE AND LIMIT MAX */}
+          <button onClick={() => removeItem(item.id)} className="btn btn-ghost btn-sm"><BiMinus /></button>
+          <button onClick={() => addItem(item)} className="btn btn-primary btn-sm"><MdAdd /></button>
+        </div>
       </div>
-      <div className="item__form">
-        {/* TODO: NO NEGATIVE VALUES HERE AND LIMIT MAX */}
-        <button onClick={() => removeItem(item.id)} className="item__button item__button--remove">-</button>
-        <button onClick={() => addItem(item)} className="item__button">+</button>
-      </div>
+
     </div>
   })
 
@@ -49,33 +51,28 @@ const Cart = ({ toggleCart }) => {
 
 
   return (
-    <Modal>
-      <div className="cart">
-        {/* Top Of Cart */}
-        <div className="cart__header">
-          <h1>Your Cart</h1>
-        </div>
-        <hr className="cart__line" />
-        {/* Cart Items */}
-        <div className="cart__main">
+    <div id="my-modal" class="modal">
+      <div class="modal-box">
+        <div className='prose'>
+          <h2 className='mb-1'>Your Cart</h2>
+          <div class="divider"></div>
           {cartItems}
-        </div>
-        {orderLoading && <ClipLoader color="#e80b40" />}
-        {orderComplete && <h3>Your order has been processed!</h3>}
-        {/* Total And Buttons`` */}
-        <div className="cart__footer">
-          <div className="cart__total">
-            <h1>Total: ${totalAmount.toFixed(2)}</h1>
-          </div>
-          <div className="cart__buttons">
-            <button onClick={toggleCart} className="cart__button cart__button--close">Close</button>
-            {/* TODO: ADD FEEDBACK AND CLOSE FORM AFTER ORDER */}
-            <button className="cart__button" onClick={handleOrderSubmit}>Order</button>
-          </div>
-        </div>
 
+          <div class="divider"></div>
+
+          <h2 className='mt-1'>Total: ${totalAmount.toFixed(2)}</h2>
+        </div>
+        <div className='m-4'>
+          {orderLoading && <PacmanLoader color="#5C7F67" />}
+          {orderComplete && <h3 className='text-primary'>Your order has been processed!</h3>}
+        </div>
+        <div class="modal-action">
+
+          <button href="" class="btn btn-primary btn-sm" onClick={handleOrderSubmit}>Order</button>
+          <a href="/components/modal#" class="btn btn-sm">Close</a>
+        </div>
       </div>
-    </Modal>
+    </div>
   )
 }
 
