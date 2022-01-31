@@ -10,19 +10,22 @@ import RestaurantSummary from './components/Meals/RestaurantSummary';
 import CartProvider from './store/CartProvider';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import "animate.css/animate.min.css";
+import CartModal from './components/Cart/Modal';
+import "@material-tailwind/react/tailwind.css";
 
 function App() {
-  const [showCart, setshowCart] = useState(false)
+  const [showModal, setShowModal] = useState(false)
 
   const handleCartToggle = () => {
-    setshowCart(!showCart)
+    setShowModal(!showModal)
   }
   return (
     <CartProvider className=''>
       <Header toggleCart={handleCartToggle} />
+      <CartModal showModal={showModal} toggleCart={handleCartToggle} />
+
       <main className='px-6 sm:px-12 md:px-16'>
         <div className="flex flex-col items-center">
-          {showCart && <Cart toggleCart={handleCartToggle} />}
           <div className='prose lg:prose-lg mt-8'>
             <h1 className='underline'>Green Bite</h1>
           </div>
@@ -65,6 +68,7 @@ function App() {
         <div class="divider my-14"></div>
       </main>
       <Footer />
+
     </CartProvider>
   );
 }
