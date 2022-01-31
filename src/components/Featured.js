@@ -11,7 +11,7 @@ const Featured = (props) => {
   });
 
   return (
-    <AnimationOnScroll animateIn='animate__flipInY' animateOut="animate__flipOutY">
+    <AnimationOnScroll animateIn='animate__flipInY' animateOut="animate__flipOutY" animateOnce>
       <div class={`card max-w-md shadow-2xl lg:card-side ${cardClass} `}>
 
         <div class="card-body">

@@ -28,7 +28,7 @@ function App() {
           <div className='prose lg:prose-lg mt-8'>
             <h1 className='underline'>Green Bite</h1>
           </div>
-          <AnimationOnScroll animateIn="animate__fadeInLeft" animateOut='animate__fadeOutLeft'>
+          <AnimationOnScroll animateIn="animate__fadeInLeft" animateOut='animate__fadeOutLeft' animateOnce>
             <RestaurantSummary />
           </AnimationOnScroll>
           {/* <Menu /> */}
@@ -60,7 +60,7 @@ function App() {
         <div class="divider my-14"></div>
 
         <section>
-          <AnimationOnScroll animateIn='animate__zoomIn' animateOut='animate__zoomOut'>
+          <AnimationOnScroll animateIn='animate__zoomIn' animateOut='animate__zoomOut' animateOnce>
             <GrandOpening />
           </AnimationOnScroll>
         </section>
