@@ -58,7 +58,7 @@ export default function CartModal({ title, message, showModal, closeModal, confi
         <h2 className='mb-1'>Your Cart</h2>
         <div class="divider"></div>
         {cartItems}
-        {cartItems.length === 0 && <p>Your cart is empty!</p>}
+        {cartItems.length === 0 && <p>Your cart is empty, check back after you've added something!</p>}
         <div class="divider"></div>
 
         <h2 className='mt-1'>Total: ${totalAmount.toFixed(2)}</h2>
