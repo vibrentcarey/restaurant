@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './App.css';
-import Cart from './components/Cart/Cart';
 import Featured from './components/Featured';
 import Footer from './components/Footer';
 import GrandOpening from './components/GrandOpening';
