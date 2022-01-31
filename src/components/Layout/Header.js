@@ -22,10 +22,7 @@ const Header = ({ toggleCart }) => {
       <div class="flex-none">
 
         <div className='' onClick={toggleCart}>
-          <a href="/components/modal#my-modal">
             <button class="btn btn-primary">Cart<FaShoppingCart className='ml-2 mr-1' />{numberOfCartItems}</button>
-          </a>
-
         </div>
       </div>
     </header>
