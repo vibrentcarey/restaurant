@@ -32,17 +32,11 @@ const MENUITEMS = [
 const Menu = () => {
   const [menuItem, setMenuItem] = useState(MENUITEMS[0])
   return (
-    // <div className="menu">
-    //   <h1 className="menu__title">Genki Menu</h1>
-    //   <hr className="menu__line"/>
-    //   {menuItems}
-    //   <h3 className="menu__subtitle">All Sushi On Our Menu Is 100% Vegan</h3>
-    // </div>
     <div>
-      <div class="tabs">
-        <button class={`tab tab-bordered ${menuItem.id === 'm1' && 'tab-active'}`} onClick={() => setMenuItem(MENUITEMS[0])}>Salad</button>
-        <button class={`tab tab-bordered ${menuItem.id === 'm2' && 'tab-active'}`} onClick={() => setMenuItem(MENUITEMS[1])}>Sushi</button>
-        <button class={`tab tab-bordered ${menuItem.id === 'm3' && 'tab-active'}`} onClick={() => setMenuItem(MENUITEMS[2])}>Burger</button>
+      <div className="tabs">
+        <button className={`tab tab-bordered ${menuItem.id === 'm1' && 'tab-active'}`} onClick={() => setMenuItem(MENUITEMS[0])}>Salad</button>
+        <button className={`tab tab-bordered ${menuItem.id === 'm2' && 'tab-active'}`} onClick={() => setMenuItem(MENUITEMS[1])}>Sushi</button>
+        <button className={`tab tab-bordered ${menuItem.id === 'm3' && 'tab-active'}`} onClick={() => setMenuItem(MENUITEMS[2])}>Burger</button>
       </div>
       <MenuItem menuItem={menuItem} />
     </div>

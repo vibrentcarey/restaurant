@@ -28,7 +28,7 @@ const MenuItem = ({ menuItem }) => {
         </figure>
       <div className="card-body">
         <h2 className="card-title">{name}
-          <div className="badge mx-2 bg-primary">NEW</div>
+          {/* <span className="badge mx-2 bg-primary">NEW</span> */}
         </h2>
         <p data-testid="description">{description}</p>
         <form className=" m-1 flex flex-col">
