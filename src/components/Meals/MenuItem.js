@@ -22,39 +22,24 @@ const MenuItem = ({ menuItem }) => {
     addToCart(+amount)
   }
   return (
-    // <div className="menu_item">
-    //   <div className="menu_item__left">
-    //     <img src={img} alt={name} className="menu_item__image" />
-    //     <div className="menu_item__info">
-    //       <h2 className="menu_item__title">{name}</h2>
-    //       {/* TODO: ADD INGREDIENTS AND CHANGE PRICE COLOUR */}
-    //       {/* <h3 className="menu_item__description">{description}</h3> */}
-    //       <h3 className="menu_item__price"> ${price}</h3>
-    //     </div>
-    //   </div>
-    //   <div className="menu_item__right">
-    //     <MenuForm addToCart={addToCart} />
-    //   </div>
-    // </div>
-
-    <div class="card sm:card-side card-bordered max-w-2xl mb-8 mt-1">
+    <div className="card sm:card-side card-bordered max-w-2xl mb-8 mt-1">
         <figure>
           <img className="object-cover h-48 max-w-2 " src={img} alt='food'/>
         </figure>
-      <div class="card-body">
-        <h2 class="card-title">{name}
-          <div class="badge mx-2 bg-primary">NEW</div>
+      <div className="card-body">
+        <h2 className="card-title">{name}
+          <div className="badge mx-2 bg-primary">NEW</div>
         </h2>
-        <p>{description}</p>
-        <form class=" m-1 flex flex-col">
+        <p data-testid="description">{description}</p>
+        <form className=" m-1 flex flex-col">
           <input className="w-12 my-2 px-2" type='number' placeholder="0" ref={amountInputRef} />
           <div>
-            <div data-tip="Add To Cart" class="tooltip tooltip-primary tooltip-bottom">
-              <button onClick={submitForm} class="btn btn-primary btn-sm mr-2"><MdAdd className="text-xl" /></button>
+            <div data-tip="Add To Cart" className="tooltip tooltip-primary tooltip-bottom">
+              <button onClick={submitForm} className="btn btn-primary btn-sm mr-2"><MdAdd className="text-xl" /></button>
             </div>
-            <div data-tip={price} class="tooltip tooltip-secondary tooltip-bottom">
-              <button class="btn btn-ghost btn-sm"><MdAttachMoney className="text-xl" /></button>
-            </div>
+            <span  data-tip={price} className="tooltip tooltip-secondary tooltip-bottom">
+              <button className="btn btn-ghost btn-sm"><MdAttachMoney className="text-xl" /></button>
+            </span>
           </div>
         </form>
       </div>
